@@ -1,0 +1,39 @@
+{
+  "name": "wahs_02_supreme_fitness_backend",
+  "version": "1.0.0",
+  "description": "Backend web service of the Supreme Fitness web application",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "WAHS_02",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^0.577.0",
+    "mongoose": "^8.20.2",
+    "nodemailer": "^7.0.12",
+    "stripe": "^20.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "nodemon": "^3.1.11",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wahsandaruwan/wahs_02_supreme_fitness_backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wahsandaruwan/wahs_02_supreme_fitness_backend/issues"
+  },
+  "homepage": "https://github.com/wahsandaruwan/wahs_02_supreme_fitness_backend#readme",
+  "keywords": []
+}
