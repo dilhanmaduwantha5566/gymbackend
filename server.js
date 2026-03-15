@@ -41,6 +41,17 @@ app.use(
   })
 );
 
+// Ensure DB connection before handling API requests in serverless runtime
+app.use(async (req, res, next) => {
+  try {
+    await connectToDatabase();
+    next();
+  } catch (error) {
+    console.error("MongoDB connection failed:", error);
+    res.status(500).json({ message: "Database connection error" });
+  }
+});
+
 // API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
@@ -70,7 +81,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = {
-  app,
-  connectToDatabase,
-};
+module.exports = app;
